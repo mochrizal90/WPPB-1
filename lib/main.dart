@@ -49,6 +49,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _text = "Ganjil";
 
   void _incrementCounter() {
     setState(() {
@@ -59,7 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
       if(_counter>10){
-        _counter = 1;
+        _counter = 0;
+      }
+      if(_counter%2 == 0){
+        _text = "Genapp";
+      }else{
+        _text = "Ganjil";
       }
     });
   }
@@ -103,8 +109,12 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: Theme.of(context).textTheme.headline4,
             ),
+            Text(
+              _text,
+              style: Theme.of(context).textTheme.headline4,
+            )
           ],
         ),
       ),
