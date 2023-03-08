@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
+  void main() {
   runApp(const MyApp());
 }
 
@@ -49,24 +49,39 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  String _text = "Ganjil";
+  String _text = "ganjil";
+  int _bil = 0;
 
   void _incrementCounter() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
+
       _counter++;
-      if(_counter>10){
-        _counter = 0;
+      /*if(_counter>20){
+        _counter = 1;
+      }*/
+  //PROGRAM LATIHAN
+      _text = "Ganjil : ";
+      for(int i=1; i<=_counter; i++){
+        if(i%3 == 0) {
+          if (i % 2 == 0) {
+            _text += '${i}, ';
+          }
+        }
       }
-      if(_counter%2 == 0){
-        _text = "Genapp";
-      }else{
-        _text = "Ganjil";
-      }
+      //PROGRAM PRAKTIKUM
+      /*_text = "Prima : ";
+      for (int i=1; i<=_counter; i++){
+        _bil = 0;
+        for (int j=1;j<=i;j++){
+          if (i%j==0){
+            _bil++;
+          }
+        }
+        if (_bil==2){
+          _text += '${i}, ';
+        }
+      }*/
+
     });
   }
 
