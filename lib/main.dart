@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
         _counter = 1;
       }*/
   //PROGRAM LATIHAN
-      _text = "Ganjil : ";
+      _text = "Genap : ";
       for(int i=1; i<=_counter; i++){
         if(i%3 == 0) {
           if (i % 2 == 0) {
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
           }
         }
       }
-      //PROGRAM PRAKTIKUM
+      //PROGRAM TUGAS
       /*_text = "Prima : ";
       for (int i=1; i<=_counter; i++){
         _bil = 0;
